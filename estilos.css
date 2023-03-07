@@ -1,0 +1,53 @@
+
+::rot{
+    --skills-bat-length: 0%;
+}
+
+*{
+    color:black;
+}
+body{
+    margin: 3px;
+    border: 5px;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: small;
+    background-image: url(https://i.pinimg.com/564x/fc/c9/f0/fcc9f07c2de3cdfa419635a6fd7ed05d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media screen and (min-width:720px){
+}
+
+fieldset {
+    background-color: lavender;
+    border: 4px;
+    border-radius: 5px;
+    }
+
+legend {
+    border: 4px;
+    border-radius: 2px;
+    background-color: lightblue;
+    }
+
+.skills__bar,
+.skills__bar::after{
+    position: relative;
+    width: 175px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 1px;
+}
+.skills__bar::after{
+    content: ' ';
+    position: absolute;
+    left: 75px;
+    background-color: grey;
+    transition: var(--transition);
+}
+.skills__bar--50::after{
+    transform: translateX(50%);
+}
